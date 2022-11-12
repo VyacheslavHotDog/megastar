@@ -16,14 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from mainapp.views import ProductViewSet
+from mainapp.views import WriterViewSet
 # Create your views here.
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 router = DefaultRouter()
-router.register(r'writers', ProductViewSet, basename='user')
+router.register(r'writers', WriterViewSet, basename='user')
 
 urlpatterns += router.urls
 

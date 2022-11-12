@@ -13,7 +13,7 @@ def dictfetchall(cursor):
     ]
 
 
-class ProductViewSet(viewsets.ViewSet):
+class WriterViewSet(viewsets.ViewSet):
     """
     A simple ViewSet
     """
