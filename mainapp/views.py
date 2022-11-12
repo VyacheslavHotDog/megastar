@@ -19,6 +19,8 @@ class ProductViewSet(viewsets.ViewSet):
     """
 
     def retrieve(self, request, pk=None):
+
+        # Также можно использовать Worker.objects.prefetch_related('books).get(pk=pk) но всегда будет выполняться два запроса
         cursor = connection.cursor()
         cursor.execute("""select mainapp_writer.*, 
             (
@@ -30,6 +32,8 @@ class ProductViewSet(viewsets.ViewSet):
             )books
             FROM mainapp_writer
             Where mainapp_writer.id = %s;""", [pk])
+
+
         res = dictfetchall(cursor)
         if not res:
             raise Http404()
