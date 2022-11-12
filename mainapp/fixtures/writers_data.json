@@ -1,0 +1,41 @@
+[
+
+  {
+    "model": "mainapp.Writer",
+    "pk": 1,
+    "fields": {
+      "name": "Виктор Пелвин"
+    }
+  },
+  {
+    "model": "mainapp.Writer",
+    "pk": 2,
+    "fields": {
+      "name": "Александр Куприн"
+    }
+  },
+  {
+    "model": "mainapp.Book",
+    "pk": 1,
+    "fields": {
+      "name": "Яма",
+      "writer_id": 2
+    }
+  },
+  {
+    "model": "mainapp.Book",
+    "pk": 2,
+    "fields": {
+      "name": "Чапаев и пустота",
+      "writer_id": 1
+    }
+  },
+  {
+    "model": "mainapp.Book",
+    "pk": 3,
+    "fields": {
+      "name": "Generation П",
+      "writer_id": 1
+    }
+  }
+]
