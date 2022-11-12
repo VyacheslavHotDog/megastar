@@ -33,7 +33,6 @@ class WriterViewSet(viewsets.ViewSet):
             FROM mainapp_writer
             Where mainapp_writer.id = %s;""", [pk])
 
-
         res = dictfetchall(cursor)
         if not res:
             raise Http404()
